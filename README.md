@@ -12,3 +12,14 @@ make -f makefile.unix
 ```
 ./bin/Release/MarioSokobanEditor
 ```
+
+## How to use it
+
+### Commands
+ - switch tile (1, 2, 3, 4, 5 keys)
+ - save (S key)
+ - set a tile (left click)
+ - erase a tile (right click)
+ 
+After pressing S, the file will be saved if the draft level is valid.
+The output will be named : `levelSaved.txt`
