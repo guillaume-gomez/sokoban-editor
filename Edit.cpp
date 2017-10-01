@@ -19,10 +19,10 @@ Edit::~Edit()
 }
 void Edit::BlitterEcran(const Window& screen)
 {
-    for(int i=0;i<145;i++)
-        {
+    for(int i = 0;i < 145; i++)
+    {
         Case[i].BlitSurfaces(  screen,Case[i]);
-        }
+    }
 }
 
 void Edit::ReadFile()
@@ -50,28 +50,28 @@ if(ifile)
         switch(c)   //  define the picture
         {          //NB it could be better if a charged only picture of each link of bmp.And after use a copy constructor
         case '0':
-        Case[i-1].changeFond("white");  //c'est juste pour le voir sur la console ,il n'y a pas d'image pareil
+            Case[i-1].changeFond("white");  //c'est juste pour le voir sur la console ,il n'y a pas d'image pareil
         break;
         case '1':
-        Case[i-1].changeFond("images/mur.bmp");
+            Case[i-1].changeFond("images/mur.bmp");
         break;
         case '2':
-        Case[i-1].changeFond("images/caisse.bmp");
+            Case[i-1].changeFond("images/caisse.bmp");
         break;
         case '3':
-        Case[i-1].changeFond("images/objectif.bmp");
+            Case[i-1].changeFond("images/objectif.bmp");
         break;
         case '4':
-        Case[i-1].changeFond("images/mario_bas.bmp");
+            Case[i-1].changeFond("images/mario_bas.bmp");
         break;
         case '5':
-        Case[i-1].changeFond("images/caisse_ok.bmp"); //a vrai dire sur le fichier du site du zero il y a un 5 !?!
+            Case[i-1].changeFond("images/caisse_ok.bmp"); //a vrai dire sur le fichier du site du zero il y a un 5 !?!
         break;
         }
 
             Case[i-1].SetX(x); // definie les coordonnés pour l'instance en cours de transformation
             Case[i-1].SetY(y);
-  //label pour sauter les lignes plus haut quand la suface est vide
+             //label pour sauter les lignes plus haut quand la suface est vide
             if(i%12 == 0)// permet de mettre les bonnes coordonnés
             {
                 y+=34;
@@ -123,34 +123,40 @@ void Edit::Input( Window& w)
             {
 
                 case SDLK_KP1:
-                Case[144].changeFond("images/mur.bmp");
+                case SDLK_1:
+                    Case[144].changeFond("images/mur.bmp");
                 break;
                 case SDLK_KP2:
-                Case[144].changeFond("images/caisse.bmp");
+                case SDLK_2:
+                    Case[144].changeFond("images/caisse.bmp");
                 break;
                 case SDLK_KP3:
-                Case[144].changeFond("images/caisse_ok.bmp");
+                case SDLK_3:
+                    Case[144].changeFond("images/caisse_ok.bmp");
                 break;
                 case SDLK_KP4:
-                Case[144].changeFond("images/objectif.bmp");
+                case SDLK_4:
+                    Case[144].changeFond("images/objectif.bmp");
                 break;
                 case SDLK_KP5:
-                Case[144].changeFond("images/mario_bas.bmp");
+                case SDLK_5:
+                    Case[144].changeFond("images/mario_bas.bmp");
                 break;
                 case SDLK_s:
-                if(FindNbMArio()!=false || TestLevel()==false )
-                {
-                    printf("vous ne pouvez sauvegarder car il n'y aucun mario ou le nombre de caisses et d'objectif et incoherent\n");
-                }
-                else if(TestCaisseOK()==false)
-                {
-                    printf("Vous ne pouvez sauvegarder car il y a trop de caisse rouge pour le niveau\n");
-                }
-                else
-                {
-                    printf("c'est bon!!!!!!!!!!!!!\n");
-                    SaveLevel();
-                }
+                    if(FindNbMArio()!=false || TestLevel()==false )
+                    {
+                        printf("vous ne pouvez sauvegarder car il n'y aucun mario ou le nombre de caisses et d'objectif et incoherent\n");
+                    }
+                    else if(TestCaisseOK()==false)
+                    {
+                        printf("Vous ne pouvez sauvegarder car il y a trop de caisse rouge pour le niveau\n");
+                    }
+                    else
+                    {
+                        SaveLevel();
+                    }
+                break;
+                default:
                 break;
 
             }

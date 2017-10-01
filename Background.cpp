@@ -6,7 +6,7 @@
 
 Image::Image():background(0),name("\0")
 {
-     positionFond.x=0;
+    positionFond.x=0;
     positionFond.y=0;
 }
 
@@ -54,7 +54,7 @@ void Image::BlitSurfaces(const  Window& g, Image& i)
 
 void Image::changeFond(std::string filename)
 {
-     name=filename; // il faudra mettre directement name au lieu de filenam.c_str()
+    name=filename; // il faudra mettre directement name au lieu de filenam.c_str()
    background=SDL_LoadBMP( filename.c_str());
 }
 
