@@ -32,7 +32,7 @@ void Edit::ReadFile()
     x=y=0;
     i=1;  // because 0 modulo 12 = 0
 
-    ifile.open("gg.txt");
+    ifile.open("level.txt");
     if(ifile==NULL)
     {
         cerr << "Erreur de lecture du fichier,"<<endl;
