@@ -185,7 +185,7 @@ int Edit::FindCoord(SDL_Event event)
 void Edit::SaveLevel()
 {
     int num;
-ofstream ofile("LevelCreer.txt", ios::out | ios::app);
+ofstream ofile("levelSaved.txt", ios::out | ios::app);
 if(ofile == NULL)
 {
     cout<<"Erreur d'ecriture dans le fichier\nVeuillez relancer l'application!\n";
