@@ -1,5 +1,7 @@
 # sokoban-editor
 
+![screenshot](editor.png)
+
 ## Compile
 ```
 on mac :
