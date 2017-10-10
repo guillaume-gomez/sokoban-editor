@@ -16,7 +16,7 @@ make -f makefile.unix
 ## How to use it
 
 ### Commands
- - switch tile (1, 2, 3, 4, 5 keys)
+ - switch tile (1, 2, 3, 4, 5 or a, z, e, r, t keys)
  - save (S key)
  - set a tile (left click)
  - erase a tile (right click)
