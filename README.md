@@ -2,6 +2,9 @@
 
 ![screenshot](editor.png)
 
+## Dependencies
+- SDL 1.2
+
 ## Compile
 ```
 on mac :
